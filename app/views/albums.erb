@@ -1,0 +1,9 @@
+<% if @albums.any? %>
+  <% @albums.each do |album| %>
+    <p><%= album.title %></p>
+  <% end %>
+
+<% else %>
+  <p>No albums available</p>
+<% end %>
+

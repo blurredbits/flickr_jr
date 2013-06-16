@@ -1,0 +1,7 @@
+<form action='/album' method='POST' name="album">
+  <p><label for="name"><h2 class="form">Album Title</h2></label>
+  <input type="text" name="album[title]" id="title" autofocus placeholder="album title"></p>
+
+  <input type="hidden" name="album[user_id]" value="<%=current_user.id%>"
+  <p><input type="submit" value="Login"></p>
+</form>

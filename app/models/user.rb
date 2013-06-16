@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   include BCrypt
 
   has_many :albums
+  has_many :photos, :through => :albums
 
   def password
     @password || Password.new(password_hash)
