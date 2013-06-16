@@ -18,6 +18,8 @@ gem 'rake'
 # MJM Extensions
 gem 'bcrypt-ruby'
 gem 'sinatra-flash'
+gem 'carrierwave'
+gem 'mini_magick'
 
 gem 'shotgun'
 

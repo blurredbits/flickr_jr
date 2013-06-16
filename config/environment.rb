@@ -24,12 +24,21 @@ require 'erb'
 require 'sinatra/flash'
 require 'bcrypt'
 require 'faker'
-
+require 'carrierwave'
+require 'carrierwave/orm/activerecord'
+require 'mini_magick'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s
+
+CarrierWave.configure do |config|
+  config.permissions = 0666
+  config.directory_permissions = 0777
+  config.root = "#{Dir.pwd}/public"
+  config.storage = :file
+end
 
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
