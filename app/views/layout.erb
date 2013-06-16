@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
+  <link href='http://fonts.googleapis.com/css?family=Economica:400,700|Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -13,7 +14,7 @@
   <nav>
     <% if logged_in? %>
     <ul class="menu">
-      <li><a href="/">FlickrJr</a></li>
+      <li><a href="/">Flickr JR</a></li>
       <li>Welcome, <a href="/user/<%= current_user.id %>"><%= current_user.name %></a></li>
       <li><a href="/album">Create Album</a></li>
       <li><a href="/albums/<%= current_user.id %>">View Your Albums</a></li>
@@ -24,6 +25,7 @@
 
     <% else %>
     <ul>
+      <li><a href="/">Flickr JR</a></li>
       <li><a href="/albums">Albums</a></li>
       <li><a href="/users">Users</a></li>
       <li><a href="/login">Login</a></li>
@@ -32,7 +34,6 @@
     <% end %>
   </nav>
   <div class="container">
-    <h1>FlickrJR</h1>
     <%= yield %>
   </div>
   <footer>

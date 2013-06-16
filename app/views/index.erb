@@ -1,11 +1,11 @@
 <div class="container">
-  <h1>Flickr Jr. DBC Style</h1>
 
-  <% if @photos != 0 %>
-      <% @photos.each do |photo| %>
-      <p>Image Title:<%= photo.title %><img src="<%= photo.file.url%>"></p>
-      <% end %>
+  <% if @photo != 0 %>
+      <div class="photo">
+        <p><%= @photo.title %></p>
+        <p><img src="<%= @photo.file.url%>"></p>
+      </div>
   <% else %>
-    <p>No photos uploaded yet</p>
+    <p>No photos uploaded yet :(</p>
   <% end %>
 </div>

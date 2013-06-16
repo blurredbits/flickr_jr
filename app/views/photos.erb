@@ -1,13 +1,18 @@
-<h2>Title: <%= @album.title %></h2>
+<h2>Album: <%= @album.title %></h2>
 <% if !@photos.nil? %>
   <% @photos.each do |photo| %>
-    <p class="photo"><img src="<%= photo.file.url%>"></p>
+    <div class="photo">
+      <p><%= photo.title %></p>
+      <p><img src="<%= photo.file.url%>"></p>
+    </div>
   <% end %>
 
 <% else %>
-  <p>No photos in this album.</p>
+  <p>No photos in this album :(</p>
 <% end %>
 
 <% if logged_in? && @album.user_id == current_user.id %>
-  <p><a href="/upload/<%= @album.id %>">Upload New Photo</a></p>
+  <div class="upload">
+    <p><a href="/upload/<%= @album.id %>">Upload New Photo</a></p>
+  <div>
 <% end %>

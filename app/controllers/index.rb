@@ -1,8 +1,8 @@
 get '/' do
   if Photo.any?
-    @photos = Photo.all
+    @photo = Photo.first(:order => "RANDOM()")
   else
-    @photos = 0
+    @photo = 0
   end
   erb :index
 end
@@ -10,6 +10,6 @@ end
 post '/upload' do
   upload = Photo.new(params[:photo])
   upload.save
-  redirect to ('/')
+  redirect to ("/albums/#{current_user.id}/#{upload.album_id}")
 end
 

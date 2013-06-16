@@ -1,9 +1,68 @@
+body {
+  font-family: 'Archivo Narrow', sans-serif;
+  /*font-family: 'Economica', sans-serif;*/
+  font-weight: 400;
+  font-size: 1em;
+  color: #666666;
+}
+
 .container {
-  margin: 20px auto;
-  width: 600px;
+  margin-top: 80px;
+  width: 70%;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
 }
 
 form input {
+}
+
+nav {
+  background: rgba(160, 160, 160, .40);
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  margin: 0 auto;
+}
+
+nav.ul, li {
+  display: inline;
+  margin-left: 50px;
+  color: #333333;
+}
+
+a {
+  color: #333333;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF9900;
+
+}
+
+.photo {
+  float: left;
+  padding: 5px;
+  background-color: #333333;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.photo p {
+  font-style: italic;
+  margin: 0px;
+  color: white;
+  font-family: 'Economica', sans-serif;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.photo img {
+  border: 1px solid gray;
+  padding: 3px;
+}
+
+.upload {
+  clear: both;
 }

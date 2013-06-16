@@ -1,7 +1,7 @@
-<h2><% @user.name %></h2>
+<h2><%= @user.name %></h2>
 
 <h3>Stats</h3>
-<p>Number of Albums: <%= @user.albums.count %>, Number of Photos: <%= @user.photos.count %></p>
+<h4><%= @user.albums.count %> albums | <%= @user.photos.count %> photos</h4>
 
 <% if @user.albums.count > 0 %>
   <p>Last Album Updated at: <%= @user.albums.last.updated_at %></p>

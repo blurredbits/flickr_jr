@@ -1,6 +1,13 @@
 <% if !@albums.nil? %>
   <% @albums.each do |album| %>
-    <p><a href="/albums/<%= album.user_id %>/<%= album.id %>"><%= album.title %></a> | Number of Photos: <%= album.photos.count %></p>
+    <p><a href="/albums/<%= album.user_id %>/<%= album.id %>"><%= album.title %></a> | <%= album.photos.count %> photos
+    <% if logged_in? && album.user_id ==current_user.id %>
+    <form action="/album/<%= album.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete Album">
+    </form>
+    <% end %>
+    </p>
   <% end %>
 
 <% else %>
