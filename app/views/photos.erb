@@ -1,0 +1,8 @@
+<h2>Title: <%= @title %></h2>
+<% if !@photos.nil? %>
+  <% @photos.each do |photo| %>
+    <p>Display photos</p>
+  <% end %>
+<% else %>
+  <p>No photos in this album.</p>
+<% end %>

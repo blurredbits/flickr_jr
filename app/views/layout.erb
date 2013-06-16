@@ -16,14 +16,16 @@
       <li><a href="/">FlickrJr</a></li>
       <li>Welcome, <a href="/user/<%= current_user.id %>"><%= current_user.name %></a></li>
       <li><a href="/album">Create Album</a></li>
-      <li><a href="/">Upload Photo</a></li>
+      <li><a href="/albums/<%= current_user.id %>">View Your Albums</a></li>
+       <li><a href="/albums">View All Albums</a></li>
+      <li><a href="/upload">Upload Photo</a></li>
       <li><a href="/users">Users</a></li>
       <li><a href="/logout">Logout</a></li>
     </ul>
 
     <% else %>
     <ul>
-      <li><a href="/">Albums</a></li>
+      <li><a href="/albums">Albums</a></li>
       <li><a href="/users">Users</a></li>
       <li><a href="/login">Login</a></li>
       <li><a href="/signup">Signup</a></li>

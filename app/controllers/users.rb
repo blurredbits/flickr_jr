@@ -21,6 +21,10 @@ get '/user/:id' do
   erb :user_profile
 end
 
+get '/users/:user_id/albums' do
+  erb :albums
+end
+
 post '/signup' do
   user = User.new(params[:user])
   if user.save

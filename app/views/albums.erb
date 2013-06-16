@@ -1,6 +1,6 @@
-<% if @albums.any? %>
+<% if !@albums.nil? %>
   <% @albums.each do |album| %>
-    <p><%= album.title %></p>
+    <p><a href="/albums/<%= album.user_id %>/<%= album.id %>"><%= album.title %></a> | Number of Photos: <%= album.photos.count %></p>
   <% end %>
 
 <% else %>
