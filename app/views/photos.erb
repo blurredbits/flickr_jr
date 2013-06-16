@@ -1,7 +1,7 @@
 <h2>Title: <%= @album.title %></h2>
 <% if !@photos.nil? %>
   <% @photos.each do |photo| %>
-    <p>Display photos</p>
+    <p class="photo"><img src="<%= photo.file.url%>"></p>
   <% end %>
 
 <% else %>

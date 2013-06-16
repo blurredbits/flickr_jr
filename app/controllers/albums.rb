@@ -17,7 +17,7 @@ end
 #list photos in album
 get '/albums/:user_id/:album_id' do
   @album = Album.find_by_id(params[:album_id])
-  @photos = Photo.find_by_album_id(params[:album_id])
+  @photos = Photo.find_all_by_album_id(params[:album_id])
   erb :photos
 end
 
@@ -31,6 +31,5 @@ end
 post '/album' do
   album = Album.new(params[:album])
   album.save
-  # @albums = Album.find_by_user_id(current_user.id)
   redirect to "/albums/#{current_user.id}"
 end
