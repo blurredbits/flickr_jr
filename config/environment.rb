@@ -23,7 +23,6 @@ require 'erb'
 # MJM extensions for extra sinatra grooviness
 require 'sinatra/flash'
 require 'bcrypt'
-require 'faker'
 require 'carrierwave'
 require 'carrierwave/orm/activerecord'
 require 'mini_magick'
